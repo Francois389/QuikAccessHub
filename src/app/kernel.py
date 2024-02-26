@@ -21,7 +21,8 @@ def launch_applications(template_used: str):
                 browser_path = template_data[category]["path"]
                 print(browser_path)
                 urls_to_open = template_data[category]["urls"]
-                command = [browser_path] + [" --new-tab " + url for url in urls_to_open]
+                command = [browser_path] + \
+                    [" --new-tab " + url for url in urls_to_open]
                 subprocess.Popen(command)
                 pass
 
