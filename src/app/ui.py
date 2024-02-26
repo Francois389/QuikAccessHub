@@ -16,8 +16,10 @@ class App(CTk):
         self.templates = TemplatesFrame(master=self, fg_color="#FFFFFF")
         self.templates.grid(row=1, column=0, padx=20, pady=0, sticky="nsew")
 
-        self.configure_templates = ConfigureTemplates(master=self, fg_color="#FFFFFF")
-        self.configure_templates.grid(row=2, column=0, padx=20, pady=10, sticky="nsew")
+        self.configure_templates = ConfigureTemplates(
+            master=self, fg_color="#FFFFFF")
+        self.configure_templates.grid(
+            row=2, column=0, padx=20, pady=10, sticky="nsew")
 
 
 class TemplatesFrame(CTkFrame):
@@ -67,7 +69,8 @@ class ConfigureTemplates(CTkFrame):
         self.grid_columnconfigure(2, weight=1)
         self.configure_templates = CTkButton(self, text="Configure Templates", command=print("ok"),
                                              font=CTkFont(family="Bahnschrift", size=15))
-        self.help = CTkButton(self, text="Help", command=print("help"), font=CTkFont(family="Bahnschrift", size=15))
+        self.help = CTkButton(self, text="Help", command=print(
+            "help"), font=CTkFont(family="Bahnschrift", size=15))
         self.configure_templates.grid(row=0, column=0, padx=70, pady=10)
         self.help.grid(row=0, column=1, padx=45, pady=10)
 
